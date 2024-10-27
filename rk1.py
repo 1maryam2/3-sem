@@ -84,10 +84,6 @@ print("2)Производители и среднее количество пр�
 for manufacturer_name, avg_part_count in manufacturer_avg_parts_sorted:
     print(f"Производитель: {manufacturer_name}, Среднее количество деталей: {avg_part_count}")
 
-
-#### Запрос 3: Список всех производителей, у которых имя начинается с буквы «К», и список работающих в них сотрудников
-
-
 result3 = [
     (manufacturer.name, [employee.name for employee in employees if any(me.employee_id == employee.employee_id and me.manufacturer_id == manufacturer.manufacturer_id for me in manufacturer_employees)])
     for manufacturer in manufacturers
